@@ -1,7 +1,5 @@
-import InitConfig from './InitConfig'
-
-class NacosConfig implements InitConfig {
-  async init(): Promise<Object> {
+class NacosConfig {
+  async init(): Promise<Record<string, any>> {
     throw new Error('Method not implemented.')
   }
 }

@@ -6,7 +6,7 @@ export default class Axios {
   static ajax(req: any, options: any) {
     const baseApi = '/proxy'
     return new Promise((resolve, reject) => {
-      let url = `http://localhost:${
+      const url = `http://localhost:${
         (global as any).config.port
       }${baseApi}${getRequestUrl(mapping, options.url)}`
       axios({

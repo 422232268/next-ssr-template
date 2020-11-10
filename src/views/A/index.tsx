@@ -1,6 +1,6 @@
 import c from './A.module.scss'
 import { Button } from 'antd'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import actionTypes from './actions'
 import React from 'react'
 

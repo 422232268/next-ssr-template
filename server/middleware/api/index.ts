@@ -2,8 +2,8 @@ import axios, { Method } from 'axios'
 import Koa from 'koa'
 
 const api = (config: any) => async (ctx: Koa.Context) => {
-  let body = ctx.request.body
-  let url = handleServerUrl(ctx.request.url, config)
+  const body = ctx.request.body
+  const url = handleServerUrl(ctx.request.url, config)
   const contentType = ctx.request.header['content-type'] || 'application/json'
   const requestBody = {
     method: (ctx.request.method as Method) || 'GET',
@@ -17,7 +17,7 @@ const api = (config: any) => async (ctx: Koa.Context) => {
 }
 
 function handleServerUrl(url: string, config: any) {
-  let matcher = url.match(/^\/api\/([A-Za-z]+)/)
+  const matcher = url.match(/^\/api\/([A-Za-z]+)/)
   if (matcher) {
     const [prefix, system] = matcher
     return `${config.protocol}${config.api[system]}${url.replace(prefix, '')}`

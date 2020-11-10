@@ -14,7 +14,7 @@ export default class ResultBase {
 export enum ResultCode {
   SUCCESS = 1,
   NETWORK_ERROR = 2,
-  VAlIDATION_ERROR = 3,
+  VALIDATION_ERROR = 3,
   BIZ_ERROR = 4,
   PERMISSION_ERROR = 5,
   UNKNOW_ERROR = 111,

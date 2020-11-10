@@ -1,14 +1,18 @@
 import Image from 'next/image'
 
-interface ZImageInterface {
+export interface ZImageProps {
   src: string
   alt?: string
   width: number
   height: number
 }
 
-const ZImage = (props: ZImageInterface) => {
+export const ZImage = (props: ZImageProps) => {
   return <Image {...props} />
 }
 
-export default ZImage
+export const ZSimpleImage = (props: ZImageProps) => {
+  return <img {...props} />
+}
+
+export default ZSimpleImage
